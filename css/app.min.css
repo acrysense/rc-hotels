@@ -2,8 +2,8 @@ body {
   position: relative;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.14;
   color: #212529;
 }
 
@@ -19,7 +19,7 @@ li {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  line-height: 1.25;
+  line-height: 1.14;
 }
 
 p {
@@ -920,10 +920,198 @@ svg {
 }
 
 .footer {
-  position: relative;
-  z-index: 1;
+  margin-top: 60px;
+  padding-top: 55px;
+  background-color: #1A2020;
+}
+@media screen and (max-width: 1023px) {
+  .footer {
+    margin-top: 40px;
+  }
+}
+.footer_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 9.5px 0;
+}
+.footer_item .logo-footer {
+  width: 210px;
+  max-height: 49px;
+  fill: #BBBFC3;
+}
+.footer_item .logo:hover .logo-footer {
+  fill: #FFFFFF;
+}
+.footer_item .c-info-box {
+  margin: 0;
+}
+.footer_item .c-info-box .i-phone {
+  width: 10.5px;
+  height: 18px;
+}
+.footer_item .c-info-box .i-mail {
+  width: 16px;
+  height: 12px;
+}
+.footer_item .c-info-box .i-address {
+  width: 16px;
+  height: 16px;
+}
+.footer_item .c-info-box a, .footer_item .c-info-box span {
+  margin: 2px 0;
+}
+.footer_item .c-info-box svg {
+  fill: #BBBFC3;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+.footer_item .c-info-box a,
+.footer_item .c-info-box span:not(.small-text) {
+  font-size: 16px;
+  display: block;
+  margin: 8px 0;
+}
+.footer_item .small-text {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 3px 0 18px;
+}
+.footer .border_item {
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}
+.footer_nav {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 2px;
+  margin-bottom: 25px;
+}
+.footer .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer .nav-list li {
+  margin: 0 16px;
+}
+.footer .nav-list li:first-child {
+  margin-left: 0;
+}
+.footer .nav-list li:last-child {
+  margin-right: 0;
+}
+.footer a, .footer span {
+  color: #BBBFC3;
+}
+.footer a:hover {
+  color: #A20F30;
+  text-decoration: underline;
+}
+.footer a:hover svg {
+  fill: #A20F30;
+}
+.footer a.active {
+  color: #A20F30;
+  text-decoration: underline;
+}
+.footer .user-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.footer .user-box a {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 7px 0 7px 22px;
+}
+.footer .user-box a:first-child {
+  margin-left: 0;
+}
+.footer .user-box .link-wrapper {
+  margin-left: 120px;
 }
 
+@media screen and (max-width: 1439px) {
+  .footer .user-box .link-wrapper {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer_nav {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .footer .nav-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .nav-list li {
+    margin: 0;
+  }
+  .footer .user-box_item a {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer {
+    padding-top: 55px;
+  }
+  .footer_nav {
+    margin: 14px 40px 0 0;
+  }
+  .footer .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .nav-list li {
+    margin: 8px 0;
+    line-height: 21px;
+  }
+  .footer .user-box {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer .c-info-box:first-child {
+    margin-bottom: 20px;
+  }
+  .footer .user-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer .user-box .user-box_item:first-child {
+    margin-bottom: 20px;
+  }
+  .footer .user-box .link-wrapper {
+    margin-left: 0;
+  }
+}
 .menu {
   position: fixed;
   top: 50px;

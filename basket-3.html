@@ -958,7 +958,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal" id="modal-notification">
+	<div class="modal is--active" id="modal-reservation">
 		<div class="modal__wrap">
 			<div class="modal__wrapper">
 				<button class="modal__close-btn modal__close">
@@ -966,6 +966,160 @@
 						<use xlink:href="img/sprite.svg#icon-close"></use>
 					</svg>
 				</button>
+				<div class="modal__top">
+					<h3 class="modal__title">Бронирование</h3>
+					<p class="modal__description">Пожалуйста, выберите желаемые даты бронирования, количество номеров и гостей. <br>Напоминаем, что минимальный период бронирования — 3 ночи <b>в период с 5 по 8 сентября</b></p>
+				</div>
+				<div class="modal__reservation reservation-data">
+					<div class="reservation-data__wrapper">
+						<div class="reservation-data__item">
+							<div class="reservation-selection">
+								<div class="reservation-selection__wrap">
+									<button class="reservation-selection__trigger">
+										<div class="reservation-selection__group">
+											<div class="reservation-selection__inner">
+												<svg class="reservation-selection__icon">
+													<use xlink:href="img/sprite.svg#icon-user"></use>
+												</svg>
+												<span class="reservation__help">Заезд-Выезд</span>
+											</div>
+											<span class="reservation-selection__value">Выберите дату</span>
+										</div>
+									</button>
+									<div class="reservation-selection__wrapper is--active">
+										<div class="reservation-date reservation-selection__date">
+											<div class="reservation-date__top">
+												<h3 class="reservation-date__title">Выберите дату заезда</h3>
+											</div>
+											<div class="reservation-date__calendar">
+												<input type="text" id="add-date" class="reservation-date__input calendar-js" placeholder="">
+											</div>
+										</div>
+										<div class="c-notify reservation-selection__notify">
+											<p class="c-notify__description">Минимальный период бронирования — 3 ночи <b>в период с 5 по 8 сентября</b></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="reservation-data__item">
+							<div class="reservation-selection">
+								<div class="reservation-selection__wrap">
+									<button class="reservation-selection__trigger">
+										<div class="reservation-selection__group">
+											<div class="reservation-selection__inner">
+												<svg class="reservation-selection__icon">
+													<use xlink:href="img/sprite.svg#icon-user"></use>
+												</svg>
+												<span class="reservation__help">Гости</span>
+											</div>
+											<span class="reservation-selection__value">Укажите количество номеров и гостей</span>
+										</div>
+										<svg class="reservation-selection__caret">
+											<use xlink:href="img/sprite.svg#icon-caret-sm"></use>
+										</svg>
+									</button>
+									<div class="reservation-selection__wrapper">
+										<div class="number-selection">
+											<div class="number-selection__top">
+												<h3 class="number-selection__title">Укажите количество номеров и гостей</h3>
+											</div>
+											<div class="number-selection__wrapper">
+												<div class="number-selection__item">
+													<div class="number-selection__inner">
+														<div class="number-selection__info">
+															<span class="number-selection__elem">Номер 1</span>
+															<span class="number-selection__elem number-selection__elem--accent">Стандарт сингл</span>
+														</div>
+														<button class="number-selection__delete" aria-label="Удалить">
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-trash"></use>
+															</svg>
+														</button>
+													</div>
+													<div class="number-selection__body">
+														<div class="number-selection__group">
+															<svg class="number-selection__icon">
+																<use xlink:href="img/sprite.svg#icon-user"></use>
+															</svg>
+															<span class="number-selection__help">Гости</span>
+														</div>
+														<div class="c-quantity number-selection__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-minus"></use>
+																	</svg>
+																</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-plus-thin"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="number-selection__item">
+													<div class="number-selection__inner">
+														<div class="number-selection__info">
+															<span class="number-selection__elem">Номер 2</span>
+															<span class="number-selection__elem number-selection__elem--accent">Люкс</span>
+														</div>
+														<button class="number-selection__delete" aria-label="Удалить">
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-trash"></use>
+															</svg>
+														</button>
+													</div>
+													<div class="number-selection__body">
+														<div class="number-selection__group">
+															<svg class="number-selection__icon">
+																<use xlink:href="img/sprite.svg#icon-user"></use>
+															</svg>
+															<span class="number-selection__help">Гости</span>
+														</div>
+														<div class="c-quantity number-selection__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-minus"></use>
+																	</svg>
+																</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-plus-thin"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="number-selection__bottom">
+												<a href="#" class="number-selection__btn btn btn--border">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-plus"></use>
+													</svg>
+													<span>Добавить номер</span>
+												</a>
+												<a href="#" class="number-selection__btn btn">Готово</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="reservation-data__btn btn">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-mark"></use>
+						</svg>
+						<span>Забронировать</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

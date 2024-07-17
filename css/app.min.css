@@ -2253,8 +2253,8 @@ svg {
 }
 .hotels__slider {
   overflow: hidden;
-  max-width: 392px;
-  min-width: 392px;
+  max-width: 496px;
+  min-width: 496px;
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -2270,7 +2270,25 @@ svg {
   }
 }
 .hotels__slider .swiper-slide {
+  position: relative;
+  z-index: 1;
   height: auto;
+}
+.hotels__slider .swiper-slide::before {
+  content: "";
+  display: block;
+  padding-top: 75.256%;
+}
+.hotels__slider .swiper-slide .hotels__slider-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .hotels__slider .swiper-controls {
   position: absolute;
@@ -2470,11 +2488,21 @@ svg {
   background-size: cover;
   background-position: center center;
 }
+.hotels__list-elem--accent {
+  font-weight: bold;
+  color: #A20F30;
+}
+.hotels__list-elem--accent::before {
+  display: none;
+}
 .hotels__list-elem--time::before {
   background-image: url(../img/sprite.svg#icon-time-accent);
 }
 .hotels__list-elem--calendar::before {
   background-image: url(../img/sprite.svg#icon-calendar-accent);
+}
+.hotels__list-elem--distance::before {
+  background-image: url(../img/sprite.svg#icon-distance);
 }
 .hotels__list-elem--bed::before {
   background-image: url(../img/sprite.svg#icon-bed);
@@ -2558,7 +2586,7 @@ svg {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 24px;
+  padding: 16px;
   border-top: 1px solid rgba(33, 37, 41, 0.1);
 }
 @media screen and (max-width: 1023px) {
@@ -2660,6 +2688,10 @@ svg {
   background-size: cover;
   background-position: center center;
 }
+.hotel-room__list-elem--accent {
+  font-weight: bold;
+  color: #A20F30;
+}
 .hotel-room__list-elem--time::before {
   background-image: url(../img/sprite.svg#icon-time);
 }
@@ -2707,6 +2739,10 @@ svg {
 }
 .hotel-room__inner-item:not(:last-child) {
   border-right: 1px solid rgba(33, 37, 41, 0.3);
+}
+.hotel-room__inner-item:last-child {
+  margin-right: 0;
+  padding-right: 0;
 }
 @media screen and (max-width: 767px) {
   .hotel-room__inner-item {
@@ -2801,12 +2837,12 @@ svg {
   -ms-grid-rows: (1fr)[2];
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 8px;
-  max-width: 650px;
+  max-width: 620px;
   width: 100%;
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
   .hotel-room__gallery {
-    max-width: 638px;
+    max-width: 610px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {

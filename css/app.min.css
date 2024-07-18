@@ -2229,6 +2229,8 @@ svg {
   overflow: hidden;
   background: #FFFFFF;
   border-radius: 8px;
+}
+.hotels__item.is--open {
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(43, 3, 11, 0.06);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(43, 3, 11, 0.06);
 }

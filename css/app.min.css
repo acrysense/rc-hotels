@@ -2229,13 +2229,11 @@ svg {
   overflow: hidden;
   background: #FFFFFF;
   border-radius: 8px;
-}
-.hotels__item.is--open {
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(43, 3, 11, 0.06);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(43, 3, 11, 0.06);
 }
 .hotels__item + .hotels__item {
-  margin-top: 24px;
+  margin-top: 4px;
 }
 .hotels__item-main {
   position: relative;
@@ -2243,7 +2241,13 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 24px;
   background: #FFFFFF;
+}
+@media screen and (max-width: 1023px) {
+  .hotels__item-main {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .hotels__item-main {
@@ -2619,7 +2623,7 @@ svg {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 24px 0 24px 24px;
+  padding: 24px;
   border-top: 1px solid rgba(33, 37, 41, 0.1);
 }
 @media screen and (max-width: 1023px) {
@@ -2875,7 +2879,7 @@ svg {
   -ms-grid-rows: (1fr)[2];
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 8px;
-  max-width: 807px;
+  max-width: 784px;
   width: 100%;
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
@@ -2920,6 +2924,7 @@ svg {
         grid-column-start: 1;
     -ms-grid-column-span: 2;
     grid-column-end: 3;
+    height: 216px;
   }
   .hotel-room__gallery-img:nth-child(2) {
     -ms-grid-row: 1;
@@ -2930,6 +2935,7 @@ svg {
         grid-column-start: 3;
     -ms-grid-column-span: 2;
     grid-column-end: 5;
+    height: 216px;
   }
   .hotel-room__gallery-img:nth-child(3) {
     -ms-grid-row: 1;
